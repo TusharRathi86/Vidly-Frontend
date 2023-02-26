@@ -1,0 +1,7 @@
+import _ from "lodash";
+
+export function paginate(item, pageNumber, pageSize) {
+  const startIndex = (pageNumber - 1) * pageSize;
+  //Lodash wrapper object.
+  return _(item).slice(startIndex).take(pageSize).value();
+}
